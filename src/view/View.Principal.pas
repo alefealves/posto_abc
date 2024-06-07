@@ -4,10 +4,19 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus;
 
 type
-  TForm1 = class(TForm)
+  TViewPrincipal = class(TForm)
+    MainMenu1: TMainMenu;
+    Cadastros1: TMenuItem;
+    Movimentos1: TMenuItem;
+    Relatrios1: TMenuItem;
+    Combustivel1: TMenuItem;
+    anque1: TMenuItem;
+    Bomba1: TMenuItem;
+    Abastecimento1: TMenuItem;
+    Relatriosporbomba1: TMenuItem;
   private
     { Private declarations }
   public
@@ -15,7 +24,7 @@ type
   end;
 
 var
-  Form1: TForm1;
+  ViewPrincipal: TViewPrincipal;
 
 implementation
 
