@@ -1,0 +1,85 @@
+# Delphi generated binaries
+*.exe
+*.dll
+*.bpl
+*.dcu
+*.dcp
+*.bpi
+*.lib
+*.ocx
+*.a
+
+# Delphi generated files
+*.cfg
+*.dsk
+*.local
+*.identcache
+*.tvsconfig
+*.tvsmeta
+*.tvslog
+
+# Delphi project files
+*.dproj
+*.dproj.local
+*.dproj.ini
+*.dproj.filters
+*.groupproj
+*.bdsgroup
+*.bdsproj
+
+# Delphi intermediate files
+__history/
+*.~*
+*.~??
+*.map
+*.drc
+*.dci
+*.obj
+
+# Delphi packages
+*.bpl
+*.dpk
+*.dproj
+*.dproj.local
+*.dproj.ini
+*.dproj.filters
+*.groupproj
+
+# Delphi resource files
+*.res
+*.dres
+
+# FireMonkey specific files
+*.fmx
+
+# Debugger and log files
+*.log
+
+# Environment and user-specific files
+*.local
+*.identcache
+*.tvsconfig
+*.tvsmeta
+*.tvslog
+*.ide
+
+# Backup files
+*.bak
+*.old
+*.orig
+*.tmp
+*.temp
+
+# Visual Studio Code
+.vscode/
+
+# JetBrains Rider
+.idea/
+
+# macOS system files
+.DS_Store
+
+# Windows system files
+Thumbs.db
+
+
