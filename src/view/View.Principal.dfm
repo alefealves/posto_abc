@@ -22,8 +22,8 @@ object ViewPrincipal: TViewPrincipal
     Align = alBottom
     Padding.Right = 5
     TabOrder = 0
-    ExplicitTop = 388
-    ExplicitWidth = 622
+    ExplicitTop = 525
+    ExplicitWidth = 773
     object LabelStatus: TLabel
       Left = 694
       Top = 1
@@ -41,7 +41,6 @@ object ViewPrincipal: TViewPrincipal
       ParentColor = False
       ParentFont = False
       Layout = tlCenter
-      ExplicitLeft = 543
       ExplicitHeight = 15
     end
   end
@@ -54,8 +53,8 @@ object ViewPrincipal: TViewPrincipal
     AutoSize = True
     TabOrder = 1
     OnResize = pnTelaInicialResize
-    ExplicitWidth = 628
-    ExplicitHeight = 397
+    ExplicitWidth = 773
+    ExplicitHeight = 525
     object pnLogo: TPanel
       Left = 250
       Top = 150
