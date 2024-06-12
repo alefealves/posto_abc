@@ -1,75 +1,63 @@
-object ViewPrincipal: TViewPrincipal
+object frmRelatorio: TfrmRelatorio
   Left = 0
   Top = 0
-  Caption = 'Posto ABC'
-  ClientHeight = 559
-  ClientWidth = 779
+  Caption = 'Relat'#243'rio'
+  ClientHeight = 1385
+  ClientWidth = 987
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -12
   Font.Name = 'Segoe UI'
   Font.Style = []
-  Menu = MainMenu1
-  WindowState = wsMaximized
-  OnCreate = FormCreate
+  OnClose = FormClose
+  OnDestroy = FormDestroy
   TextHeight = 15
-  object PanelStatus: TPanel
-    Left = 0
-    Top = 534
-    Width = 779
-    Height = 25
-    Align = alBottom
-    Padding.Right = 5
-    TabOrder = 0
-    ExplicitTop = 388
-    ExplicitWidth = 622
-    object LabelStatus: TLabel
-      Left = 694
-      Top = 1
-      Width = 79
-      Height = 23
-      Margins.Right = 5
-      Align = alRight
-      Caption = 'Desconectado'
-      Color = clRed
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -12
-      Font.Name = 'Segoe UI'
-      Font.Style = [fsBold]
-      ParentColor = False
-      ParentFont = False
-      Layout = tlCenter
-      ExplicitLeft = 543
-      ExplicitHeight = 15
-    end
-  end
-  object pnTelaInicial: TPanel
+  object relAbastecimento: TRLReport
     Left = 0
     Top = 0
-    Width = 779
-    Height = 534
-    Align = alClient
-    AutoSize = True
-    TabOrder = 1
-    OnResize = pnTelaInicialResize
-    ExplicitWidth = 628
-    ExplicitHeight = 397
-    object pnLogo: TPanel
-      Left = 250
-      Top = 150
-      Width = 275
-      Height = 275
-      AutoSize = True
-      BevelOuter = bvNone
-      TabOrder = 0
-      object imgLogo: TImage
+    Width = 992
+    Height = 1403
+    DataSource = ViewRelatorio.DataSource1
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clBlack
+    Font.Height = -17
+    Font.Name = 'Arial'
+    Font.Style = []
+    object RLBand1: TRLBand
+      Left = 47
+      Top = 47
+      Width = 898
+      Height = 184
+      BandType = btHeader
+      object RLLabel1: TRLLabel
+        Left = 243
+        Top = 16
+        Width = 328
+        Height = 27
+        Alignment = taCenter
+        Caption = 'Relat'#243'rio de Abastecimentos'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -23
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object RLSystemInfo1: TRLSystemInfo
+        Left = 279
+        Top = 49
+        Width = 76
+        Height = 19
+        Info = itFullDate
+        Layout = tlCenter
+        Text = ''
+      end
+      object RLImage1: TRLImage
         Left = 0
         Top = 0
-        Width = 275
-        Height = 275
-        Align = alClient
+        Width = 145
+        Height = 137
         Picture.Data = {
           0954506E67496D61676589504E470D0A1A0A0000000D49484452000002110000
           02110806000000F49EEF120000ABDB4944415478DAEC9D05985555F7C6D714DD
@@ -1449,57 +1437,263 @@ object ViewPrincipal: TViewPrincipal
           0885448410420821422111218410428850484408218410221412114208218408
           8544841042082142F1FF39B75C2462444CB30000000049454E44AE426082}
         Stretch = True
-        ExplicitWidth = 300
-        ExplicitHeight = 250
       end
-    end
-  end
-  object MainMenu1: TMainMenu
-    Left = 160
-    Top = 16
-    object Cadastros1: TMenuItem
-      Caption = 'Cadastros'
-      object Combustivel1: TMenuItem
-        Caption = 'Combustivel'
-        OnClick = Combustivel1Click
+      object RLDraw1: TRLDraw
+        Left = 3
+        Top = 171
+        Width = 892
+        Height = 9
+        Borders.Sides = sdAll
+        Borders.Width = 6
+        DrawKind = dkLine
       end
-      object Tanque1: TMenuItem
+      object RLLabel2: TRLLabel
+        Left = 43
+        Top = 146
+        Width = 36
+        Height = 18
+        Alignment = taCenter
+        Caption = 'Data'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -15
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object RLLabel3: TRLLabel
+        Left = 149
+        Top = 146
+        Width = 58
+        Height = 18
+        Alignment = taCenter
         Caption = 'Tanque'
-        OnClick = Tanque1Click
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -15
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentFont = False
       end
-      object Bomba1: TMenuItem
+      object RLLabel4: TRLLabel
+        Left = 300
+        Top = 146
+        Width = 54
+        Height = 18
+        Alignment = taCenter
         Caption = 'Bomba'
-        OnClick = Bomba1Click
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -15
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object RLLabel5: TRLLabel
+        Left = 448
+        Top = 146
+        Width = 40
+        Height = 18
+        Alignment = taCenter
+        Caption = 'Valor'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -15
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentFont = False
       end
     end
-    object Movimentos1: TMenuItem
-      Caption = 'Movimentos'
-      object Abastecimento1: TMenuItem
-        Caption = 'Abastecimento'
-        OnClick = Abastecimento1Click
+    object RLBand2: TRLBand
+      Left = 47
+      Top = 231
+      Width = 898
+      Height = 32
+      object RLDBText1: TRLDBText
+        Left = 42
+        Top = 3
+        Width = 36
+        Height = 17
+        Alignment = taCenter
+        DataField = 'DATA'
+        DataSource = ViewRelatorio.DataSource1
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -15
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
+        Text = ''
       end
-      object ConsultaAbastecimentos1: TMenuItem
-        Caption = 'Consulta'
-        OnClick = ConsultaAbastecimentos1Click
+      object RLDBText2: TRLDBText
+        Left = 154
+        Top = 3
+        Width = 54
+        Height = 17
+        Alignment = taCenter
+        DataField = 'TANQUE'
+        DataSource = ViewRelatorio.DataSource1
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -15
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
+        Text = ''
+      end
+      object RLDBText3: TRLDBText
+        Left = 303
+        Top = 3
+        Width = 52
+        Height = 17
+        Alignment = taCenter
+        DataField = 'BOMBA'
+        DataSource = ViewRelatorio.DataSource1
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -15
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
+        Text = ''
+      end
+      object RLDBText4: TRLDBText
+        Left = 451
+        Top = 3
+        Width = 38
+        Height = 17
+        Alignment = taCenter
+        DataField = 'VALOR'
+        DataSource = ViewRelatorio.DataSource1
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -15
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
+        Text = ''
       end
     end
-    object Relatrios1: TMenuItem
-      Caption = 'Relat'#243'rios'
-      object Relatriosporbomba1: TMenuItem
-        Caption = 'Relat'#243'rios por bomba'
-        OnClick = Relatriosporbomba1Click
+    object RLBand3: TRLBand
+      Left = 47
+      Top = 303
+      Width = 898
+      Height = 35
+      BandType = btFooter
+      object RLSystemInfo2: TRLSystemInfo
+        Left = 760
+        Top = 13
+        Width = 112
+        Height = 19
+        Info = itPageNumber
+        Text = ''
       end
     end
-  end
-  object ConnectionPosto: TFDConnection
-    Params.Strings = (
-      'User_Name=sysdba'
-      'Password=masterkey'
-      'Database=C:\Projetos Delphi\PostoABC\BASE.FDB'
-      'DriverID=FB')
-    Connected = True
-    LoginPrompt = False
-    Left = 32
-    Top = 24
+    object RLBand4: TRLBand
+      Left = 47
+      Top = 263
+      Width = 898
+      Height = 40
+      BandType = btSummary
+      object RLDBText5: TRLDBText
+        Left = 451
+        Top = 17
+        Width = 38
+        Height = 17
+        Alignment = taCenter
+        DataField = 'VALOR'
+        DataSource = ViewRelatorio.DS_Sumarizado
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -15
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
+        Text = ''
+      end
+      object RLLabel6: TRLLabel
+        Left = 388
+        Top = 17
+        Width = 40
+        Height = 18
+        Alignment = taCenter
+        Caption = 'Total'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -15
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object RLLabel7: TRLLabel
+        Left = 22
+        Top = 17
+        Width = 82
+        Height = 18
+        Alignment = taCenter
+        Caption = 'Per'#237'odo de'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -15
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object RLLabel8: TRLLabel
+        Left = 217
+        Top = 17
+        Width = 28
+        Height = 18
+        Alignment = taCenter
+        Caption = 'At'#233
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -15
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object RLDBText6: TRLDBText
+        Left = 118
+        Top = 17
+        Width = 58
+        Height = 17
+        Alignment = taCenter
+        DataField = 'DAT_INI'
+        DataSource = ViewRelatorio.DS_Sumarizado
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -15
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
+        Text = ''
+      end
+      object RLDBText7: TRLDBText
+        Left = 259
+        Top = 17
+        Width = 64
+        Height = 17
+        Alignment = taCenter
+        DataField = 'DAT_FIM'
+        DataSource = ViewRelatorio.DS_Sumarizado
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -15
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
+        Text = ''
+      end
+      object RLDraw2: TRLDraw
+        Left = 3
+        Top = 3
+        Width = 892
+        Height = 9
+        Borders.Sides = sdAll
+        Borders.Width = 6
+        DrawKind = dkLine
+      end
+    end
   end
 end
