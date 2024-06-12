@@ -16,6 +16,7 @@ Sistema completo para o controle dos abastecimentos realizados no posto abc.
 <br/>
 Versão do Delphi usada: Delphi 11.<br/>
 Conexão com o banco de dados: Firedac.<br/>
+SGBD usado: IBExpert
 Banco de dados: Firebird.<br/>
 Gerador de relatórios: Fortes Report.<br/>
 <br/>
