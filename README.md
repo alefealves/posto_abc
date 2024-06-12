@@ -1,6 +1,7 @@
 # Aplicação: Controle de Abastecimentos (PostoABC)
 
-Sistema completo para o controle dos abastecimentos realizados no posto abc.
+Sistema completo para o controle dos abastecimentos realizados no posto abc. Neste projeto fui utilizado
+os conceitos Orientacao a Objetos, MVC e Multicamadas.
 
 # Requisitos funcionais:
 
