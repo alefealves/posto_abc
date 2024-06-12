@@ -53,7 +53,7 @@ alefealves@hotmail.com<br/>
 
 4. **Menu Relatorios**: Menu relatórios de abastecimentos
 
-![Menu Relatorios](screenshots/menu_abastecimentos.png)
+![Menu Relatorios](screenshots/menu_relatorios.png)
 
 5. **Tela Padrao Busca**: Tela padrao de busca
 
