@@ -22,6 +22,7 @@ Para execucão do projeto local:
 
 ```
 ctrl + shift + F9
+```
 
 4. A aplicação abrirá a tela home.
 
@@ -81,4 +82,3 @@ alefealves@hotmail.com<br/>
 11. **Relatório PDF**: Modelo de relatório usando Fortes Reports
 
 ![Relatório PDF](screenshots/relatorioPdf.png)
-```
